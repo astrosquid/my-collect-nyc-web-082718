@@ -2,9 +2,7 @@ def my_collect(array)
   a = []
   count = 0 
   while count < array.length do 
-    if yield(array[count]) == true 
-      a << array[count]
-    end 
+    a << yield(array[count])
     count += 1 
   end 
   a 
